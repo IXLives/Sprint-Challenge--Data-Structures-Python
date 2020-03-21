@@ -22,12 +22,13 @@ duplicates = []  # Return the list of duplicates in this data structure
 # store one list of names in a binary search tree
 # iterate through the other list checking to see if the bst contains the name
 # if true add to dupes
-names1bst = BinarySearchTree(None)
+names_bst = BinarySearchTree('Names')
 for name_1 in names_1:
-    names1bst.insert(name_1)
-    for name_2 in names_2:
-        if names1bst.contains(name_2):
-            duplicates.append(name_2)
+    if names_bst.contains(name_1) == False:
+        names_bst.insert(name_1)
+for name_2 in names_2:
+    if names_bst.contains(name_2) == True:
+        duplicates.append(name_2)
 
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
