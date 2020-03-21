@@ -15,6 +15,9 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
+# store one list of names in a binary search tree
+# iterate through the other list checking to see if the bst contains the name
+# if true add to dupes
 for name_1 in names_1:
     for name_2 in names_2:
         if name_1 == name_2:
