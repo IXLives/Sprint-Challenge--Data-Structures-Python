@@ -15,8 +15,7 @@ class RingBuffer:
         # check if full
         size = self.storage.__len__()
         if (size == self.capacity):
-            self.storage.remove_from_head()
-            self.storage.add_to_tail(item)
+            self.storage.head = item
         # check if empty
         elif (self.storage.length == 0):
             self.storage.add_to_tail(item)
