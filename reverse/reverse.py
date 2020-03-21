@@ -49,8 +49,9 @@ class LinkedList:
         prev_node = None
         nextNode = None
         current_node = self.head
-
+        # iterate through list
         while current_node is not None:
+            # changing pointers
             nextNode = current_node.next_node
             current_node.next_node = prev_node
             prev_node = current_node
